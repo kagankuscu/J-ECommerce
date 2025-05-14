@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 
+import java.util.Set;
+
 @EqualsAndHashCode(callSuper = true)
 @Getter
 @Setter
@@ -26,4 +28,7 @@ public class Address extends BaseEntity {
     private String region;
     @Column(nullable = false)
     private String postalCode;
+
+    @OneToMany(mappedBy = "address")
+    private Set<UserAddress> addresses;
 }
