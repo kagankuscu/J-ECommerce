@@ -18,4 +18,7 @@ public class ProductCategory extends BaseEntity {
 
     @Column(nullable = false)
     private String categoryName;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    private ProductCategory parentCategory;
 }

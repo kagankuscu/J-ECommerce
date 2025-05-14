@@ -14,8 +14,8 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @SuperBuilder
 @Entity
-@Table(name = "user_method_payments")
-public class UserMethodPayment extends BaseEntity {
+@Table(name = "user_payment_method")
+public class UserPaymentMethod extends BaseEntity {
 
     @Column(nullable = false)
     private String provider;
@@ -27,7 +27,7 @@ public class UserMethodPayment extends BaseEntity {
     private Boolean isDefault;
 
     @ManyToOne
-    private AppUser appUser = null;
+    private AppUser user = null;
     @ManyToOne
     private PaymentType paymentType;
 }

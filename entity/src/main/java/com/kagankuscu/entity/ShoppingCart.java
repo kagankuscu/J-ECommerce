@@ -14,9 +14,9 @@ import lombok.experimental.SuperBuilder;
 @AllArgsConstructor
 @SuperBuilder
 @Entity
-@Table(name = "user_method_payments")
+@Table(name = "shopping_carts")
 public class ShoppingCart extends BaseEntity {
 
     @ManyToOne
-    private AppUser appUser = null;
+    private AppUser user = null;
 }

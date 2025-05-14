@@ -25,7 +25,7 @@ public class ShopOrder extends BaseEntity {
     private Integer orderTotal;
 
     @ManyToOne
-    private UserMethodPayment userMethodPayment;
+    private UserPaymentMethod userMethodPayment;
 
     @ManyToOne
     private Address address;
@@ -37,5 +37,5 @@ public class ShopOrder extends BaseEntity {
     private OrderStatus orderStatus;
 
     @ManyToOne
-    private AppUser appUser;
+    private AppUser user;
 }

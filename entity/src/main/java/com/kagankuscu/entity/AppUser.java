@@ -15,7 +15,7 @@ import java.util.Set;
 @AllArgsConstructor
 @SuperBuilder
 @Entity
-@Table(name = "app_users")
+@Table(name = "users")
 public class AppUser extends BaseEntity {
 
     @Column(nullable = false)

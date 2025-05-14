@@ -22,5 +22,5 @@ public class UserReview extends BaseEntity {
     @ManyToOne
     private OrderLine orderLine;
     @ManyToOne
-    private AppUser appUser = null;
+    private AppUser user = null;
 }
